@@ -1,32 +1,35 @@
 -- criando banco de dados
-CREATE DATABASE db_informacoes;
+CREATE DATABASE db_ecommerce;
 
 -- informando o banco de dados
-USE db_informacoes;
+USE db_ecommerce;
 
 -- criando tabela
-CREATE TABLE tb_funcionarios (
-id BIGINT (5) AUTO_INCREMENT,
+CREATE TABLE tb_produtos (
+id BIGINT (8) AUTO_INCREMENT,
 nome VARCHAR (100),
-cpf VARCHAR (20),
-funcao VARCHAR (30),
-salario BIGINT (10),
+tipo VARCHAR (20),
+marca VARCHAR (30),
+preco BIGINT (10),
 
 PRIMARY KEY (id)
 );
 
 -- populando tabela 
-INSERT INTO tb_funcionarios (nome, cpf, funcao, salario) VALUE ("Rodrigo", "111.111.111-11", "Recepcionista", 1000);
-INSERT INTO tb_funcionarios (nome, cpf, funcao, salario) VALUE ("Roberto", "222.222.222-22", "Atendimento ao cliente", 2000);
-INSERT INTO tb_funcionarios (nome, cpf, funcao, salario) VALUE ("Maria Fernanda", "333.333.333-33", "TI", 3000);
-INSERT INTO tb_funcionarios (nome, cpf, funcao, salario) VALUE ("Fábia", "444.444.444-44", "Administração", 4000);
-INSERT INTO tb_funcionarios (nome, cpf, funcao, salario) VALUE ("Jéssica", "555.555.555-55", "Marketing", 5000);
+INSERT INTO tb_produtos (nome, tipo, marca, preco) VALUE ("Camiseta", "Roupa", "NIKE", 100);
+INSERT INTO tb_produtos (nome, tipo, marca, preco) VALUE ("Tenis", "Calçado", "PUMA", 200);
+INSERT INTO tb_produtos (nome, tipo, marca, preco) VALUE ("Boné", "Acessório", "ADIDAS", 30);
+INSERT INTO tb_produtos (nome, tipo, marca, preco) VALUE ("Relógio", "Acessório", "CHAMPION", 400);
+INSERT INTO tb_produtos (nome, tipo, marca, preco) VALUE ("Chinelo", "Calçado", "NIKE", 50);
+INSERT INTO tb_produtos (nome, tipo, marca, preco) VALUE ("Óculos de sol", "Acessório", "CHILLI BEANS", 500);
+INSERT INTO tb_produtos (nome, tipo, marca, preco) VALUE ("Tiara", "Acessório", "Renner", 5);
+INSERT INTO tb_produtos (nome, tipo, marca, preco) VALUE ("Calça", "Roupa", "GAP", 100);
 
--- salarios maiores que 2000
-SELECT * FROM tb_funcionarios WHERE salario > 2000;
+-- preços maiores que 500
+SELECT * FROM tb_produtos WHERE preco > 500;
 
--- salarios menores que 2000
-SELECT * FROM tb_funcionarios WHERE salario < 2000;
+-- preços menores que 500
+SELECT * FROM tb_produtos WHERE preco < 500;
 
 -- atualizando dado de uma query
-UPDATE tb_funcionarios SET cpf = "111.222.333-44" WHERE id = 3;
+UPDATE tb_produtos SET marca = "C&A" WHERE id = 7;
