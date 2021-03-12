@@ -32,4 +32,4 @@ SELECT * FROM tb_alunos WHERE nota > 7.00;
 SELECT * FROM tb_alunos WHERE nota < 7.00;
 
 -- atualizando dado de uma query
-UPDATE tb_aulos SET nota = 10.00 WHERE id = 7;
+UPDATE tb_alunos SET nota = 10.00 WHERE id = 7;
