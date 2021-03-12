@@ -62,4 +62,4 @@ SELECT * FROM tb_personagem WHERE nome LIKE "%C%";
 SELECT * FROM tb_personagem INNER JOIN tb_classe ON tb_personagem.classe_id = tb_classe.id_classe;
 
 -- todos os personagens arqueiros
-SELECT tb_personagem.nome, tb_classe.id_classe FROM tb_personagem RIGHT JOIN tb_classe ON tb_personagem.classe_id = tb_classe.id_classe;
+SELECT tb_personagem.nome FROM tb_personagem WHERE tb_personagem.classe_id = 3;
