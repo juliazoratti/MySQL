@@ -61,5 +61,5 @@ SELECT * FROM tb_produto WHERE nome LIKE "%C%";
 -- Inner join entre tabela categoria e produto.
 SELECT * FROM tb_produto INNER JOIN tb_categoria ON tb_produto.categoria_id = tb_categoria.id_categoria;
 
--- todas os produtos que são de aves
+-- todas os produtos que são de Elétricos
 SELECT tb_produto.nome FROM tb_produto WHERE tb_produto.categoria_id = 2;

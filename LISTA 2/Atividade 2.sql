@@ -13,9 +13,6 @@ ativo BOOLEAN,
 PRIMARY KEY (id_categoria)
 );
 
--- informando o banco de dados que irei usar
-USE db_pizzaria_legal;
-
 -- populando tabela 
 INSERT INTO tb_categoria (tipo, ativo) VALUE ("Vegetariana", true);
 INSERT INTO tb_categoria (tipo, ativo) VALUE ("Promoção", true);
@@ -55,10 +52,10 @@ SELECT * FROM tb_pizza;
 -- Pizzas com o valor maior do que 45 reais.
 SELECT * FROM tb_pizza WHERE preco > 45.00;
 
--- Produtos com valor entre 29 e 60 reais.
+-- Pizzas com valor entre 29 e 60 reais.
 SELECT * FROM tb_pizza WHERE preco BETWEEN 29.00 AND 60.00;
 
--- utilizando LIKE buscando os Produtos com a letra C.
+-- utilizando LIKE buscando os Pizzas com a letra C.
 SELECT * FROM tb_pizza WHERE nome LIKE "%C%";
 
 -- Inner join entre tabela categoria e pizza.

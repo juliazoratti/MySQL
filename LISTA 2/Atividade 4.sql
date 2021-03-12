@@ -56,7 +56,7 @@ SELECT * FROM tb_produto WHERE preco > 50.00;
 SELECT * FROM tb_produto WHERE preco BETWEEN 3.00 AND 60.00;
 
 -- utilizando LIKE buscando os Produtos com a letra C.
-SELECT * FROM tb_produto WHERE nome LIKE "%Co%";
+SELECT * FROM tb_produto WHERE nome LIKE "%C%";
 
 -- Inner join entre tabela categoria e produto.
 SELECT * FROM tb_produto INNER JOIN tb_categoria ON tb_produto.categoria_id = tb_categoria.id_categoria;
